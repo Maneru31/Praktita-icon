@@ -67,10 +67,9 @@
         app:layout_constraintTop_toBottomOf="@id/group"
         android:text="Вход"
         android:textColor="@color/white"
-        android:background="@drawable/tedit_bg"
+
         android:id="@+id/btnOpen"
         android:layout_marginTop="43dp"
-
         />
 
 

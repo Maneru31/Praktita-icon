@@ -16,7 +16,7 @@ class SplashScreen : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             } else {
-                startActivity(Intent(this, SecondActivity::class.java))
+                startActivity(Intent(this, SayPassword::class.java))
             }
             finish()
         }, 3000) //delaing 3 seconds

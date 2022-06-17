@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                         App.dm.setName(binding.name.text.toString())
                         App.dm.setOtche(binding.otche.text.toString())
                         App.dm.setGroup(binding.group.text.toString())
-                        startActivity(Intent(this, SecondActivity::class.java))
+                        startActivity(Intent(this, CreatePassword::class.java))
 
                     }
                     else {

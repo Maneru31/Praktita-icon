@@ -6,6 +6,9 @@ class DataManager(val baseContext: Context)  {
     val api = Api.createApi()
     val shared = baseContext.getSharedPreferences("Cash", Context.MODE_PRIVATE)
 
+    fun getPass() : String = shared.getString("Pass", "").toString()
+    fun setPass(pass : String) = shared.edit().putString("pass", pass).apply()
+
     fun getFam() : String = shared.getString("fam", "").toString()
     fun setFam(fam : String) = shared.edit().putString("fam", fam).apply()
     fun getName() : String = shared.getString("name", "").toString()

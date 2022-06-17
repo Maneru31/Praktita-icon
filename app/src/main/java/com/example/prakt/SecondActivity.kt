@@ -41,9 +41,9 @@ class SecondActivity : AppCompatActivity() {
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe({
-                        Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Заявка отправлена", Toast.LENGTH_SHORT).show()
                     }, {
-                        Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Ошибка сервера", Toast.LENGTH_SHORT).show()
                         println(it.message)
                     })
             }
