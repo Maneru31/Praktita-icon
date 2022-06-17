@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
                         App.dm.setOtche(binding.otche.text.toString())
                         App.dm.setGroup(binding.group.text.toString())
                         startActivity(Intent(this, SecondActivity::class.java))
+
                     }
                     else {
                         Toast.makeText(this, "Не правильно введены данные", Toast.LENGTH_SHORT).show()

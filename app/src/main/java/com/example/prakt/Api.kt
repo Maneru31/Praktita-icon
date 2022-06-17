@@ -33,7 +33,7 @@ interface Api {
                 .setLenient()
                 .create()
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://креатив256.рф/")
+                .baseUrl("http://www.креатив256.site/")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
