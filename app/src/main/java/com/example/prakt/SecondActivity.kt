@@ -24,19 +24,12 @@ class SecondActivity : AppCompatActivity() {
         binding.otche2.text = otche
         binding.group2.text = group
 
-        println(fam)
-        println(name)
-        println(otche)
-        println(group)
-
         binding.btnRequest.setOnClickListener {
 
             if (binding.count.text.toString() == "0") {
                 Toast.makeText(this, "Укажите количество", Toast.LENGTH_SHORT).show()
 
             } else {
-                Toast.makeText(this, "completed", Toast.LENGTH_SHORT).show()
-                println(binding.count.text.toString())
                 val dps = App.dm.api
                     .request(
                         binding.fam2.text.toString(),
@@ -54,6 +47,13 @@ class SecondActivity : AppCompatActivity() {
                         println(it.message)
                     })
             }
+        }
+        binding.btnBack.setOnClickListener{
+            App.dm.setFam("")
+            App.dm.setName("")
+            App.dm.setOtche("")
+            App.dm.setGroup("")
+            super.onBackPressed()
         }
 
     }

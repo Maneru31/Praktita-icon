@@ -12,8 +12,12 @@ class SplashScreen : AppCompatActivity() {
 
         var handler = Handler()
         handler.postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            if (App.dm.getFam() == ""){
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                startActivity(Intent(this, SecondActivity::class.java))
+            }
             finish()
         }, 3000) //delaing 3 seconds
     }
